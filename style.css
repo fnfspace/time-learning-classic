@@ -271,8 +271,8 @@ h2 {
 /* 3단계용 그리드 */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 350px);
-  column-gap: 8px;
+  grid-template-columns: repeat(3, 350px);
+  column-gap: 150px;
   row-gap: 50px;
   position: absolute;
   top: 50%;
@@ -339,8 +339,8 @@ h2 {
 }
 
 .miniClock {
-  width: 220px;
-  height: 220px;
+  width: 350px;
+  height: 350px;
   border: 4px solid #000;
   border-radius: 50%;
   position: relative;
@@ -348,8 +348,8 @@ h2 {
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
-  --radius: 90px;   /* 작은 시계용 반지름 */
-  --offset-x: -4px;
+  --radius: 160px;   /* ìž‘ì€ ì‹œê³„ìš© ë°˜ì§€ë¦„ */
+  --offset-x: -5px;
   --offset-y: -8px;
 }
 
@@ -380,13 +380,13 @@ h2 {
 
 /* ✅ 작은 시계용 바늘 (색상은 그대로, 길이/굵기만 줄임) */
 .miniClock .hand.hour {
-  width: 60px;   /* 길이 줄임 */
+  width: 110px;   /* 길이 줄임 */
   height: 6px;   /* 굵기 줄임 */
   background: #333; /* 큰 시계와 동일 색상 */
 }
 
 .miniClock .hand.minute {
-  width: 85px;   /* 길이 줄임 */
+  width: 150px;   /* 길이 줄임 */
   height: 4px;   /* 굵기 줄임 */
   background: #555; /* 큰 시계와 동일 색상 */
 }
