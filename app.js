@@ -350,6 +350,9 @@ function showStage1() {
   const stage3 = document.getElementById("stage3"); // 3단계 그리드
   const optionsContainer = document.getElementById("options"); // ✅ 추가
 
+  // ✅ 4단계 전용 클래스 제거
+  analogClock.classList.remove("stage4");
+
   // 3단계 그리드 숨기기 + 내용 초기화
   stage3.classList.add("hidden");
   stage3.innerHTML = "";
@@ -394,6 +397,9 @@ function showStage2() {
   const speakerArea = document.getElementById("speaker-icon");
   const stage3 = document.getElementById("stage3");
   const optionsContainer = document.getElementById("options"); // ✅ 추가
+
+  // ✅ 4단계 전용 클래스 제거
+  analogClock.classList.remove("stage4");
 
   // 3단계 그리드 숨기기 + 내용 초기화
   stage3.classList.add("hidden");
@@ -549,6 +555,9 @@ function showStage4() {
   stage3.innerHTML = "";
   analogClock.style.display = "block";
   optionsContainer.innerHTML = "";
+
+  // ✅ 4단계 전용 클래스 추가
+  analogClock.classList.add("stage4");
 
   // ✅ 여기서 className 대신 classList.add 사용
   optionsContainer.classList.add("stage4");
@@ -715,7 +724,7 @@ function showStage5Question() {
 
   // 보기: 정답 + 오답 3개
   const choices = [current.text];
-  while (choices.length < 4) {
+  while (choices.length < 3) {
     const randomChoice = stage5Questions[Math.floor(Math.random() * stage5Questions.length)].text;
     if (!choices.includes(randomChoice)) choices.push(randomChoice);
   }

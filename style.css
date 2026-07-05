@@ -190,6 +190,8 @@ h2 {
   --radius: 220px;   /* 숫자 배치 반지름 */
   --offset-x: -12px; /* 숫자 위치 보정 X */
   --offset-y: -18px; /* 숫자 위치 보정 Y */
+
+  top: 30px; /* 원하는 만큼 아래로 내리기 */
 }
 
 /* 숫자 1~12 */
@@ -408,6 +410,194 @@ h2 {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-@media (max-width: 480px) {
-  .progress-indicator { font-size: 12px; padding: 5px 8px; top: 8px; right: 8px; }
+
+/* 📱 모바일 가로모드 (폭 1080px 이하 + landscape) */
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+  .home-page {
+    height: auto;
+    padding-top: 0vh;          /* ✅ 맨 위 여백 제거 */
+    flex-direction: column;    /* 세로 배치 유지 */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0px;
+  }
+
+  .page {
+    margin-top: 15px !important;  /* ✅ 기본 50px 여백 제거 */
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;      /* 위쪽만 조금 주고 나머지는 0 */
+  }
+
+  /* 단계 제목과 부제목 크기 줄이기 */
+  #stage-main-title {
+    font-size: 1.5rem !important;  /* 원래 2.5rem → 줄임 */
+    margin-top: 10px;
+  }
+
+  #stage-subtitle {
+    font-size: 1rem !important;  /* 원래 2rem → 줄임 */
+    margin: 1px 0;
+  }
+
+  #home-icon {
+    font-size: 3rem !important;   /* 원래 5rem → 줄임 */
+    top: 10px;
+    left: 10px;
+  }
+
+  /* 네비게이션 화살표 크기 줄이기 */
+  .arrow.left {
+    border-width: 20px 30px 20px 0;   /* 원래 50px/60px → 줄임 */
+    margin-left: 10px;
+  }
+  .arrow.right {
+    border-width: 20px 0 20px 30px;
+    margin-right: 10px;
+  }
+
+  /* 스피커 아이콘 크기 줄이기 */
+  #speaker-icon {
+    font-size: 3rem !important;   /* 원래 5rem → 줄임 */
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .menu button {
+    width: 160%;                /* 화면 폭에 맞게 */
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .clock-icon {
+    font-size: 1rem;
+    margin-top: 3px; /* 아이콘을 살짝 아래로 내림 */
+  }
+
+  .progress-indicator {
+    font-size: 1rem;     /* 글씨 크기 키움 */
+    padding: 7px 15px;     /* 박스 크기 키움 */
+    border-radius: 8px;    /* 둥글기 조금 더 크게 */
+  }
+
+  #analogClock {
+    width: 200px;
+    height: 200px;
+    border: 7px solid #000;
+
+    --radius: 91px;   /* 숫자 배치 반지름 */
+    --offset-x: -4px; /* 숫자 위치 보정 X */
+    --offset-y: -14px; /* 숫자 위치 보정 Y */
+  }
+  
+  /* 숫자 1~12 */
+  .number {
+    font-size: 1rem;
+  }
+
+  /* 시침: 짧고 굵은 화살표 */
+  .hand.hour {
+    width: 60px;       /* 길이 */
+    height: 8px;       /* 굵기 */
+  }
+
+  /* 분침: 길고 중간 굵기 화살표 */
+  .hand.minute {
+    width: 90px;       /* 길이 */
+    height: 6px;       /* 굵기 */
+  }
+  
+  /* 중심점 */
+  .center-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* 3단계용 그리드 */
+  .grid-container {
+    grid-template-columns: repeat(3, 200px);
+    column-gap: 20px;
+  }
+
+  .miniClock {
+    width: 140px;
+    height: 140px;
+  
+    --radius: 60px;
+    --offset-x: -2px;
+    --offset-y: -9px;
+  }
+
+  .miniClock .number {
+    font-size: 0.7rem;   /* 글자 크기 줄이기 */
+  }
+
+  /* ✅ 작은 시계용 바늘 (색상은 그대로, 길이/굵기만 줄임) */
+  .miniClock .hand.hour {
+    width: 45px;   /* 길이 줄임 */
+    height: 6px;   /* 굵기 줄임 */
+  }
+
+  .miniClock .hand.minute {
+    width: 65px;   /* 길이 줄임 */
+    height: 4px;   /* 굵기 줄임 */
+  }
+
+  /* 작은 시계 중심점 */
+  .miniClock .center-dot {
+    width: 9.5px;   /* 크기 줄이기 */
+    height: 9.5px;
+  }
+
+  #analogClock.stage4 {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #000;
+
+    --radius: 63px;   /* 숫자 배치 반지름 */
+    --offset-x: -4px; /* 숫자 위치 보정 X */
+    --offset-y: -14px; /* 숫자 위치 보정 Y */
+  }
+
+  /* ✅ 4단계 전용 시침/분침 */
+  #analogClock.stage4 .hand.hour {
+    width: 50px;   /* 4단계에서는 더 짧게 */
+    height: 7px;   /* 굵기 조정 */
+  }
+
+  #analogClock.stage4 .hand.minute {
+    width: 65px;   /* 4단계에서는 길이 줄임 */
+    height: 5px;
+  }
+
+  #options button {
+    width: 150px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  /* 5단계 */
+  .question-mark {
+    font-size: 4rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .candidates-row {
+    gap: 35px;               /* 시계 간격 */
+    margin-top: 0px;
+  }
 }
