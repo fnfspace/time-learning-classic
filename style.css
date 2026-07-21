@@ -565,7 +565,7 @@ h2 {
 
   /* ✅ 시계 + 보기 버튼을 중앙에 세로 배치 */
   .quiz-container {
-    gap: 70px;                /* 시계와 버튼 사이 간격 */
+    gap: 85px;                /* 시계와 버튼 사이 간격 */
   }
 
   #analogClock.stage4 {
@@ -609,7 +609,7 @@ h2 {
   /* 5단계 */
   .question-mark {
     font-size: 2rem;
-    margin-top: 5px;
+    margin-top: 40px;
     margin-bottom: 5px;
   }
 
