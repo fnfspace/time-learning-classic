@@ -307,7 +307,7 @@ h2 {
   border-radius: 50% !important;          /* 동그라미 모양 */
   background-color: #111 !important;
   color: #00ff00 !important;
-  transform: scale(1.1);
+  //transform: scale(1.1);
 }
 
 /* 오답: 네모 표시 */
@@ -316,7 +316,7 @@ h2 {
   border-radius: 0 !important;            /* 네모 모양 */
   background-color: #111 !important;
   color: #ff0000 !important;
-  transform: scale(1.05);
+  //transform: scale(1.05);
 }
 
 /* 5단계 */
@@ -529,7 +529,7 @@ h2 {
   /* 3단계용 그리드 */
   .grid-container {
     grid-template-columns: repeat(3, 200px);
-    column-gap: 20px;
+    column-gap: 5px;
   }
 
   .miniClock {
@@ -562,6 +562,11 @@ h2 {
     height: 9.5px;
   }
 
+  /* ✅ 시계 + 보기 버튼을 중앙에 세로 배치 */
+  .quiz-container {
+    gap: 50px;                /* 시계와 버튼 사이 간격 */
+  }
+
   #analogClock.stage4 {
     width: 150px;
     height: 150px;
@@ -583,15 +588,26 @@ h2 {
     height: 5px;
   }
 
+  /* 4단계 */
+  #options.stage4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
   #options button {
-    width: 150px;
-    height: 60px;
-    font-size: 1rem;
+    width: 140px;
+    height: 50px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;   /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
   }
 
   /* 5단계 */
   .question-mark {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-top: 5px;
     margin-bottom: 5px;
   }
