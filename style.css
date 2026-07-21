@@ -168,7 +168,7 @@ h2 {
 /* ✅ 시계 + 보기 버튼을 중앙에 세로 배치 */
 .quiz-container {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -191,7 +191,7 @@ h2 {
   --offset-x: -12px; /* 숫자 위치 보정 X */
   --offset-y: -18px; /* 숫자 위치 보정 Y */
 
-  top: 45px; /* 원하는 만큼 아래로 내리기 */
+  top: 55px; /* 원하는 만큼 아래로 내리기 */
 }
 
 /* 숫자 1~12 */
@@ -565,7 +565,7 @@ h2 {
 
   /* ✅ 시계 + 보기 버튼을 중앙에 세로 배치 */
   .quiz-container {
-    gap: 60px;                /* 시계와 버튼 사이 간격 */
+    gap: 70px;                /* 시계와 버튼 사이 간격 */
   }
 
   #analogClock.stage4 {
@@ -599,7 +599,7 @@ h2 {
 
   #options button {
     width: 140px;
-    height: 50px;
+    height: 40px;
     font-size: 0.8rem;
     display: flex;
     align-items: center;   /* 세로 중앙 정렬 */
